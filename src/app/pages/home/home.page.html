@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-main">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides [options]="slideOptsOne"  slidesPerView="3">
+    <ion-slide *ngFor="let img of [1, 2, 3, 4, 5]">
+      <div class="slider-wrap">
+        <img src="../../../assets/img/{{img}}.jpg" tappable (click)="openPreview(img)"/>
+      </div>
+    </ion-slide>     
+  </ion-slides>
+  <div class="container">
+    <h2 class="heading-border">Welcome to <span>Fab Home Interio</span></h2>
+    <div class="content-wrap">
+       <div class="content">    
+         <p><strong> Fab Home Interio </strong>Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of <strong> Civil, Construction, Interiors & MEP</strong>. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; IDI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; IDI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope. </p>
+       </div>
+       <div class="image">
+         <img src="../../../assets/img/wlcm.png" class="img-fluid"/>
+       </div>
+       <a routerLink="" class="read-more">More  <ion-icon name="arrow-round-forward"></ion-icon></a>
+    </div>
+  </div>  
+  <div class="container">
+    <h2 class="heading-border">What<span> We Do</span></h2>
+    <div class="what-wedo-wrap">
+      <div class="item"  *ngFor="let item of whatWeDo">
+        <a routerLink="/whatwedodetail/{{item.id}}" style="background-image: url({{item.img}})">
+          <img src="{{item.icon}}"/>
+          <h2>{{item.heading}}</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <h2 class="heading-border">Why<span> Choose Us</span></h2>
+  </div> -->
+</ion-content>
+          

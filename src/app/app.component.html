@@ -1,0 +1,49 @@
+<ion-app [class.dark-theme]="dark">
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu contentId="main-content">
+      <ion-content>
+        <!-- <ion-list lines="none">
+          <div class="menu">
+            <ion-list-header class="header-name">
+              Menu
+            </ion-list-header>
+
+            <ion-menu-toggle autoHide="false">
+              <ion-item routerLink="" routerLinkActive="active" routerDirection="root" detail="false">
+                <ion-icon slot="start" name="home" class="item"></ion-icon>
+                <ion-label>
+                  Home
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
+          </div>
+          </ion-list> -->
+          <div class="menu"> 
+            <div class="header-name">      
+              <ion-icon name="grid"></ion-icon>&nbsp; &nbsp;Menu      
+            </div>
+            <ul>
+              <li autoHide="false">
+                <ion-menu-toggle autoHide="false">
+                  <a routerLink="/home" routerLinkActive="active" routerDirection="root" detail="false"> 
+                    <ion-icon slot="start" name="home" class="item"></ion-icon>Home</a>
+                  </ion-menu-toggle>
+                </li>
+              <li autoHide="false">
+                <ion-menu-toggle>
+                  <a routerLink="/about" routerLinkActive="active" routerDirection="root" detail="false">
+                    <ion-icon slot="start" name="home" class="item"></ion-icon>About Us</a>
+                </ion-menu-toggle>
+              </li>
+            </ul>
+          </div>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+
+</ion-app>

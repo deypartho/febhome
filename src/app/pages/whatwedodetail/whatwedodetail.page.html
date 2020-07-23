@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-main">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="WhatweDoDetail">
+  <div class="speaker-background">
+    <img [src]="WhatweDoDetail.img">
+    <h2>{{WhatweDoDetail.heading}}</h2>
+  </div>
+
+  <div class="ion-padding speaker-detail details">
+    <p>{{WhatweDoDetail.content}}</p>
+
+    
+  </div>
+</div>
+</ion-content>
