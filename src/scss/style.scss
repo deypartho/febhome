@@ -12,47 +12,7 @@ p{
 body{
     font-family: 'Rubik', sans-serif;
 }
-.menu{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: $white; 
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        li{
-            a{
-                display: flex;
-                padding: 15px 10px 15px 18px;
-                color: $menu-color;
-                font-size: 16px;
-                text-decoration: none;
-                .item{
-                    font-size: 20px;
-                    margin-right: 10px;
-
-                }
-                &.active{
-                    color: $brand-red; 
-                    background-color: #e6e6e6;
-                }  
-            }
-        }
-    }   
-    .header-name{
-        background-color: $brand-red;
-        color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        font-size: 1.2rem;
-        padding: 17px 18px;    
-    }
-}   
-   
+// 
 .header-main{
     --background: rgb(255, 0, 0);
     --color: #fff;
@@ -65,6 +25,7 @@ body{
     }
 }
 //home slider
+
 ion-slide{
     background-color: $white;
 }
@@ -73,6 +34,12 @@ ion-slide{
  overflow: hidden;
  width: 85%;
  margin-top: 20px;
+}
+.shop-slider{      
+ border-radius: 0;
+ overflow: hidden;
+ width: 100%;
+ margin-top: 0px;
 }
 .heading-border{
     color: $brand-black;

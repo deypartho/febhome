@@ -13,5 +13,8 @@ export class ServicesService {
   getwhatWeDoId(id : number){
     return this.config.whatWeDo[id - 1]
   }
+  getShopItem(id : number){
+    return this.config.shop[id - 1]
+  }
  
 }

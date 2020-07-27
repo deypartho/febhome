@@ -1,0 +1,91 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-main">
+   
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="page-title">Shop</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">  
+<ion-card>
+    <img src="../../../assets/img/pf6.jpg"/>
+    <div class="card-title">Interior  Works</div>
+    <div class="card-subtitle">Melbourne, AU</div>
+</ion-card>
+
+<!------duble row product----->
+  <!-- <IonContent>
+    <ion-row align-items-center class="mynewr11">
+      <ion-col col-5 *ngFor="let shop of shops">
+        <ion-card>
+          <a routerLink="/cart/{{shop.id}}">
+              <img src="{{shop.img}}">
+          </a>   
+              <ion-card-header>
+                  <ion-card-subtitle>{{shop.subtitle}}</ion-card-subtitle>
+                  <ion-card-title>{{shop.title}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+              <IonContent class="card-footer">
+                <ion-row class="row">
+                 <ion-col col-5>
+                    <p>{{shop.price}}</p>
+                    </ion-col>
+                 <ion-col col-5>
+                    <a routerLink="/cart/{{shop.id}}" class="add-to-cart">
+                    <ion-icon name="cart-outline"></ion-icon>
+                      Cart
+                    </a> 
+                  </ion-col>
+                  
+                  
+                  </ion-row>
+                </IonContent>
+              </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </IonContent> -->
+  <!------single row product----->
+  <IonContent>
+  <ion-row>
+   <ion-col col-10 class="mynewcol22">
+    <ion-card *ngFor="let shop of shops">
+    <a routerLink="/cart/{{shop.id}}">
+        <img src="{{shop.img}}">
+    </a>   
+        <ion-card-header>
+            <ion-card-subtitle>{{shop.subtitle}}</ion-card-subtitle>
+            <ion-card-title>{{shop.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        <IonContent class="card-footer">
+          <ion-row class="row">
+           <ion-col col-5>
+              <p>₹ {{shop.price}}</p>
+              </ion-col>
+           <ion-col col-5>
+              <a routerLink="/cart/{{shop.id}}" class="add-to-cart"  (click)="addCart()">
+              <ion-icon name="cart-outline"></ion-icon>
+                Add To Cart
+              </a> 
+            </ion-col>
+            
+            
+            </ion-row>
+          </IonContent>
+        </ion-card-content>
+    </ion-card>
+    </ion-col>
+</ion-row>
+  </IonContent>
+
+</ion-content>
+ 

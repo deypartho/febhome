@@ -1,0 +1,71 @@
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+}
+.card-footer{
+    display: flex;
+    flex-direction: column;
+    background: rgb(243 242 242);
+    padding: 0 7px;
+    border-radius: 0 0 6px 6px;
+}
+ion-card ion-item a{
+  padding: 0;
+}
+ion-card-content ion-row.row{
+    display: flex;
+    align-items: center;
+}
+ion-card-header ion-card-title{
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+    color: #000;
+}
+ion-card-header ion-card-subtitle{
+    text-align: left;
+}
+ion-card-content p{
+    text-align: left;
+    font-size: 20px;
+    color: #ff0000;
+    font-weight: bold;
+    padding: 6px 0;
+}
+ion-card-content a.add-to-cart{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ion-card-content a ion-icon{
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}

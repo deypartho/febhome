@@ -28,5 +28,57 @@ export const configration ={
             heading: "Interior Solutions",
             content: "This is always the most sensitive aspect of the project which helps define the relationship between the client and service provider. The styling that IDI’s designers  provide and the seamless merger of the same with the client’s brand, colours and design, is the key. Once the same is settled, the marriage between the two is set for success ! This is always the most sensitive aspect of the project which helps define the relationship between the client and service provider. The styling that IDI’s designers  provide and the seamless merger of the same with the client’s brand, colours and design, is the key. Once the same is settled, the marriage between the two is set for success ! "
           }
+    ],
+    shop:[
+      {
+        id: 1,
+        title: "Interior  Works",
+        subtitle: "Melbourne, AU",
+        price: "60,000.00",
+        plot: "Fab Home Interio Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of Civil, Construction, Interiors & MEP. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; FHI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; FHI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope.",
+        img: "../../../assets/img/pf1.jpg",
+        url: "/cart",
+        cat: "Engineering & Construction"
+      },
+      {
+        id: 2,
+        title: "Interior  Works",
+        subtitle: "Melbourne, AU",
+        price: "60,000.00",
+        plot: "Fab Home Interio Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of Civil, Construction, Interiors & MEP. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; FHI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; FHI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope.",
+        img: "../../../assets/img/pf2.jpg",
+        url: "/cart",
+        cat: "Style & Branding"
+      },
+      {
+        id: 3,
+        title: "Interior  Works",
+        subtitle: "Melbourne, AU",
+        price: "60,000.00",
+        plot: "Fab Home Interio Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of Civil, Construction, Interiors & MEP. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; FHI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; FHI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope.",
+        img: "../../../assets/img/pf3.jpg",
+        url: "/cart",
+        cat: "Interior Solutions"
+      },
+      {
+        id: 4,
+        title: "Interior  Works",
+        subtitle: "Melbourne, AU",
+        price: "60,000.00",
+        plot: "Fab Home Interio Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of Civil, Construction, Interiors & MEP. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; FHI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; FHI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope.",
+        img: "../../../assets/img/pf6.jpg",
+        url: "/cart",
+        cat: "Turnkey Solutions"
+      },
+      {
+        id: 5,
+        title: "Interior  Works",
+        subtitle: "Melbourne, AU",
+        price: "60,000.00",
+        plot: "Fab Home Interio Which is also referred as IDI Is an ISO Certified 9001:2008 company, excels in accomplishing jobs from ground zero to completion with our In-house team of Civil, Construction, Interiors & MEP. Based in Noida and having presence in Delhi, Haryana, Gujarat, Punjab, Maharashtra and abroad ; FHI is capable of taking jobs related to civil construction, Interior Designing, Execution, and on turnkey basis of any size. Backed with an extensive experience of more than 20 years through its leadership and being a recognized service provider; FHI today is synonymous of quality & excellence and provide services in time bound manner as per the requirements of the project without compromising cost, quality, resources, risk and scope.",
+        img: "../../../assets/img/pf7.jpg",
+        url: "/cart",
+        cat: "Turnkey Solutions"
+      },
     ]
 }

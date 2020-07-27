@@ -1,3 +1,11 @@
 .list-md{
     padding: 0;
 }
+ion-toolbar{
+    --background: rgb(255, 0, 0);
+    --color: #fff;
+}
+
+ion-item ion-icon {
+    --display: inline-block;
+}
