@@ -146,3 +146,31 @@ ion-slide{
 //   ion-slide:last-child {
 //     margin-right: 0;
 //   }
+.cart-header{
+    --background-color: transparent;
+}
+ion-fab-button {
+    --background: var(--ion-color-step-150, #fff);
+    --background-hover: var(--ion-color-step-200, #f2f2f2);
+    --background-focused: var(--ion-color-step-250, #d9d9d9);
+  
+    --color: var(--ion-color-primary, #3880ff);
+  }
+  ion-fab{
+    bottom: 70px;
+    right: 26px;
+  }
+.cart-header{
+    background-color: transparent;
+    ion-icon{
+        color: #fff;
+        font-size: 35px;
+        position: relative;
+    }
+    ion-badge{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+    }
+}

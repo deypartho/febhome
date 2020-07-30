@@ -43,6 +43,11 @@ export class AppComponent {
     url   : '/shop',  
     icon  : 'pricetags'   
     },  
+    {  
+    title : 'Tabs',  
+    url   : '/tabs-page',  
+    icon  : 'pricetags'   
+    },  
     ];  
    }  
 }

@@ -6,6 +6,11 @@
     </ion-buttons>
     <ion-title class="page-title">Shop</ion-title>
     <ion-buttons slot="end">
+      <button  class="cart-header" ion-button ><ion-icon name="cart"></ion-icon>
+          <ion-badge>0</ion-badge>  
+      </button>
+    </ion-buttons>
+    <ion-buttons slot="end">
       <ion-button (click)="presentPopover($event)">
         <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
       </ion-button>
@@ -58,7 +63,7 @@
   <ion-row>
    <ion-col col-10 class="mynewcol22">
     <ion-card *ngFor="let shop of shops">
-    <a routerLink="/cart/{{shop.id}}">
+    <a routerLink="/product/{{shop.id}}">
         <img src="{{shop.img}}">
     </a>   
         <ion-card-header>
@@ -72,7 +77,7 @@
               <p>₹ {{shop.price}}</p>
               </ion-col>
            <ion-col col-5>
-              <a routerLink="/cart/{{shop.id}}" class="add-to-cart"  (click)="addCart()">
+              <a routerLink="/product/{{shop.id}}" class="add-to-cart"  (click)="addCart()">
               <ion-icon name="cart-outline"></ion-icon>
                 Add To Cart
               </a> 

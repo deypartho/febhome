@@ -32,9 +32,17 @@ const routes: Routes = [
     loadChildren: () => import('./pages/shop/shop.module').then( m => m.ShopPageModule)
   },
   {
-    path: 'cart/:id',
-    loadChildren: () => import('./pages/cart/cart.module').then( m => m.CartPageModule)
-  }
+    path: 'product/:id',
+    loadChildren: () => import('./pages/product/product.module').then( m => m.ProductPageModule)
+  },
+  {
+    path: 'tabs-page',
+    loadChildren: () => import('./pages/tabs-page/tabs-page.module').then( m => m.TabsPagePageModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
+  },
 ];
 
 @NgModule({

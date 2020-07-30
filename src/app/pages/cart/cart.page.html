@@ -1,8 +1,14 @@
 <ion-header class="ion-no-border">
   <ion-toolbar class="header-main">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/shop"></ion-back-button>
+      <ion-back-button defaultHref="/product"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <button  class="cart-header" ion-button>
+        <ion-icon name="cart"></ion-icon>
+          <ion-badge>0</ion-badge>  
+      </button>
+  </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="presentPopover($event)">
         <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
@@ -12,25 +18,5 @@
 </ion-header>
 
 <ion-content>
-  <IonContent>
-    <ion-row>
-     <ion-col col-10 class="mynewcol22">
-      
-        <div *ngIf="items">
-        <div class="speaker-background">
-          <img [src]="items.img">
-        </div>
-        <ion-card>
-          <div class="ion-padding speaker-detail details">
-          <h2>{{items.title}}</h2>
-          <p class="price">₹  {{items.price}}</p>
-          <p>{{items.plot}}</p>
-          <p class="category">Category: <span>{{items.cat}}</span></p>
-        </div>
-        <ion-button expand="full" color="dark" size="large">Add to Cart</ion-button>
-      </ion-card>
-      </div>
-    </ion-col>
-  </ion-row>
-</IonContent>
-</ion-content>
+asd
+</ion-content>  
