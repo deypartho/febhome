@@ -17,80 +17,22 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="card-background-page">  
-<ion-card>
-    <img src="../../../assets/img/pf6.jpg"/>
-    <div class="card-title">Interior  Works</div>
-    <div class="card-subtitle">Melbourne, AU</div>
-</ion-card>
-
-<!------duble row product----->
-  <!-- <IonContent>
-    <ion-row align-items-center class="mynewr11">
-      <ion-col col-5 *ngFor="let shop of shops">
-        <ion-card>
-          <a routerLink="/cart/{{shop.id}}">
-              <img src="{{shop.img}}">
-          </a>   
-              <ion-card-header>
-                  <ion-card-subtitle>{{shop.subtitle}}</ion-card-subtitle>
-                  <ion-card-title>{{shop.title}}</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-              <IonContent class="card-footer">
-                <ion-row class="row">
-                 <ion-col col-5>
-                    <p>{{shop.price}}</p>
-                    </ion-col>
-                 <ion-col col-5>
-                    <a routerLink="/cart/{{shop.id}}" class="add-to-cart">
-                    <ion-icon name="cart-outline"></ion-icon>
-                      Cart
-                    </a> 
-                  </ion-col>
-                  
-                  
-                  </ion-row>
-                </IonContent>
-              </ion-card-content>
-          </ion-card>
-      </ion-col>
-    </ion-row>
-  </IonContent> -->
-  <!------single row product----->
+<ion-content class="card-background-page">
   <IonContent>
-  <ion-row>
-   <ion-col col-10 class="mynewcol22">
-    <ion-card *ngFor="let shop of shops">
-    <a routerLink="/product/{{shop.id}}">
-        <img src="{{shop.img}}">
-    </a>   
-        <ion-card-header>
-            <ion-card-subtitle>{{shop.subtitle}}</ion-card-subtitle>
-            <ion-card-title>{{shop.title}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-        <IonContent class="card-footer">
-          <ion-row class="row">
-           <ion-col col-5>
-              <p>₹ {{shop.price}}</p>
-              </ion-col>
-           <ion-col col-5>
-              <a routerLink="/product/{{shop.id}}" class="add-to-cart"  (click)="addCart()">
-              <ion-icon name="cart-outline"></ion-icon>
-                Add To Cart
-              </a> 
-            </ion-col>
-            
-            
-            </ion-row>
-          </IonContent>
-        </ion-card-content>
-    </ion-card>
-    </ion-col>
-</ion-row>
-  </IonContent>
-
-</ion-content>
+    <ion-grid>
+      <ion-row align-items-center class="mynewr11">
+        <ion-col  size="6" col-5 *ngFor = "let c of categorys">
+          <ion-card  (click)="getCatIdNavigate(c)">
+            <img src="../../../assets/img/{{c.img}}"/>
+            <div class="card-title">{{c.title}}</div>
+            <div class="card-subtitle">{{c.subtitle}}</div>
+        </ion-card>
+        
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+    </IonContent>
+    <app-social></app-social>
+  </ion-content>
  

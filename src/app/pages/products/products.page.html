@@ -1,9 +1,65 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>products</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-main">
+   
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/shop"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="page-title">Products</ion-title>
+    <ion-buttons slot="end">
+      <button  class="cart-header" ion-button ><ion-icon name="cart"></ion-icon>
+          <ion-badge>0</ion-badge>  
+      </button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
-</ion-content>
+
+<ion-content class="card-background-page">  
+  <ion-card *ngFor="catitem">
+      <img src="../../../assets/img/{{catitem.img}}"/>
+      <div class="card-title">{{catitem.title}}</div>
+      <div class="card-subtitle">Melbourne, AU</div>
+  </ion-card>
+  
+    <IonContent>
+    <ion-row>
+     <ion-col col-10 class="mynewcol22">
+      <ion-card *ngFor="let product of catproducts">
+      <a routerLink="/product/{{product.id}}">
+          <img src="../../../assets/img/{{product.img}}">
+      </a>   
+          <ion-card-header>
+              <ion-card-subtitle>{{product.subtitle}}</ion-card-subtitle>
+              <ion-card-title>{{product.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          <IonContent class="card-footer">
+            <ion-row class="row">
+             <ion-col col-5>
+                <p>₹ {{product.price}}</p>
+                </ion-col>
+             <ion-col col-5>
+                <a routerLink="/product/{{product.id}}" class="add-to-cart"  (click)="addCart()">
+                <ion-icon name="cart-outline"></ion-icon>
+                  Add To Cart
+                </a> 
+              </ion-col>
+              
+              
+              </ion-row>
+            </IonContent>
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+  </ion-row>
+    </IonContent>
+    <app-social></app-social>
+  </ion-content>
+
+

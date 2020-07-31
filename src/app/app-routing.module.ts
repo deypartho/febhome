@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/whatwedodetail/whatwedodetail.module').then( m => m.WhatwedodetailPageModule)  
   },
   {
+    path: 'products/:id',
+    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
+  },
+  {
     path: 'shop',
     loadChildren: () => import('./pages/shop/shop.module').then( m => m.ShopPageModule)
   },
