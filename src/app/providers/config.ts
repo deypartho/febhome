@@ -106,5 +106,31 @@ export const configration ={
         url: "/cart",
         category: "Turnkey Solutions"
       },
+    ],
+    landingMenu:[
+      {
+        title : 'Home',
+        url   : '/home',
+        icon  : 'fa-shopping-bag',
+        bgcolor : "blue"
+      },
+      {
+        title : 'About Us',
+        url   : '/about',
+        icon  : 'fa-shopping-bag',
+        bgcolor : 'red'
+      },
+      {
+        title : 'Shop',
+        url   : '/shop',
+        icon  : 'fa-shopping-bag',
+        bgcolor : 'brown'
+      },
+      {
+        title : 'Contact Us',
+        url   : '',
+        icon  : 'fa-shopping-bag',
+        bgcolor : 'green'
+      },
     ]
 }

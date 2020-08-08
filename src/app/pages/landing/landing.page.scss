@@ -1,0 +1,50 @@
+
+.landing-header{
+    --background: transparent;
+    text-align: center;
+    padding: 25px 0;
+    img{
+        width: 60%;
+    }
+}
+.landing-content{
+    position: absolute;
+    z-index: 0;
+    .container{
+        background-image: url(../../../assets/img/l-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        padding-top: 80px;
+    }
+}
+ion-card{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: transparent;
+    .icon{
+        position: relative;
+        z-index: 2;
+        width: 50%;
+    }
+    .card-title{
+        color: #fff;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+    }
+   .bg-img{
+        position: absolute;
+        z-index: 1;
+   }
+}
+ion-fab{
+    display: none;  
+    visibility: hidden;
+}
