@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverPage } from '../popover/popover';
 import { ServicesService } from 'src/app/providers/services.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-about',
   templateUrl: './about.page.html',
@@ -9,7 +10,7 @@ import { ServicesService } from 'src/app/providers/services.service';
 })
 export class AboutPage implements OnInit {
   whatWeDo: any;
-  constructor(public popoverCtrl: PopoverController, private service: ServicesService) { }
+  constructor(public popoverCtrl: PopoverController, private service: ServicesService, private router: Router) { }
 
   ngOnInit() {
     this.whatWeDo = this.getwhatWeDo()

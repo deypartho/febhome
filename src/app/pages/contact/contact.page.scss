@@ -83,24 +83,29 @@
   .contsct-wrapper{
     background-color: #ff0000;
     height: 100vh;
-    padding-top: 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .contact-icon{
       display: flex;
       justify-content: center;
       text-align: center;
       align-items: center;
       flex-direction: column;
+      margin-bottom: 20px;
       img{
-        width: 42%;
+        width: 5em;
       }
       h2{
         font-size: 22px;
         font-weight: bold;
         color: #fff;
-      }
+      }  
     }
     .form{
       padding: 15px;
+      width: 100%;
       ion-item{
         border-radius: 40px;
         margin-bottom: 15px;
