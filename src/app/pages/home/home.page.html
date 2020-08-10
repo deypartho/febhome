@@ -39,12 +39,19 @@
   <div class="container">
     <h2 class="heading-border">What<span> We Do</span></h2>
     <div class="what-wedo-wrap">
-      <div class="item"  *ngFor="let item of whatWeDo">
-        <a routerLink="/whatwedodetail/{{item.id}}" style="background-image: url({{item.img}})">
-          <img src="{{item.icon}}"/>
-          <h2>{{item.heading}}</h2>
-        </a>
-      </div>
+      <IonContent>
+        <ion-grid>
+          <ion-row align-items-center class="mynewr11">
+            <ion-col  size="6" col-5 class="item"  *ngFor="let item of whatWeDo">
+              <a routerLink="/whatwedodetail/{{item.id}}">
+                <!-- <img src="{{item.icon}}"/> -->
+                <img src="{{item.img}}" alt="" srcset="" class="what-we-do-bgimg">
+                <h2>{{item.heading}}</h2>
+              </a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </IonContent>
     </div>
   </div>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>

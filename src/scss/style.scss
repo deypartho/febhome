@@ -111,22 +111,42 @@ ion-slide{
         justify-content: center;
         align-items: center;
         float: left;
+        height: 150px;
         a{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            background-size: cover;
+            width: 100%;
+            height: 100%;
             text-decoration: none;
-            padding: 25px;
-            img{
-                max-width: 35%;
+            .what-we-do-bgimg{
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
             }
+            // img{
+            //     max-width: 35%;
+            // }
             h2{
                 font-size: 18px;
                 text-decoration: none;
                 color: #fff;
                 text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            ion-icon{
+                color: #ff0000;
+                margin-right: 10px;
+                font-size: 14px;
             }
         }
     }

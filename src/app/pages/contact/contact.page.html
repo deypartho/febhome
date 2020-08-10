@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-main">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contsct-wrapper">
+ <div class="contsct-wrapper">
+  <div class="contact-icon">
+    <img src="../../../assets/img/contact-us.png" alt="" srcset="">
+  </div> 
+  <div class="form">
+    <form>
+      <ion-item>
+        <ion-input type="text"  name="First Name" placeholder="First Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text"  name="Last Name" placeholder="Last Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text"  name="Email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item class="message">
+        <ion-textarea  name="Comment or Message" placeholder="Comment or Message"></ion-textarea>
+      </ion-item>
+      <button class="submit-btn" ion-button type="submit" block>Submit   <ion-icon name="chevron-forward-circle"></ion-icon></button>
+    </form>
+  </div>
+ </div>
+</ion-content>

@@ -19,6 +19,38 @@
 </ion-header>
 
 <ion-content>    
-About
+  <div class="container">
+    <div class="what-wedo-wrap">
+      <h2 class="heading-border">What<span> WE ARE</span></h2>
+      <p>IDI Infra Pvt. Limited, (formerly known as Innovation & Design Image Pvt. Limited), a professionally managed company, was incorporated in the year 2010.  As a Quality Management System Certified Company (ISO 9001 2008, ISO 18001:2007 & ISO 14001:2015), IDI Infra Pvt. Limited is committed to its clients with a customer-oriented strategy, focusing on innovative and customized products and services in order to transform their ideas and objectives into realities. On the strength of relevant resources and skills including those of a Team of highly qualified and experienced professionals in their respective fields, consisting of over 200 personnel, the Company possesses all the required ingredients to conceptualize, plan, execute and deliver, with consistency, even the most complex of Projects encompassing entire gamut of the Interior Related works.</p>
+      <h2 class="heading-border">What<span> WE DO</span></h2>
+      <p>IDI Infra excels in providing One Stop Solutions for end to end Interior Projects which includes:</p>
+    
+        <IonContent>
+          <ion-grid>
+            <ion-row align-items-center class="mynewr11">
+              <ion-col  size="6" col-5 class="item"  *ngFor="let item of whatWeDo">
+                <a routerLink="/whatwedodetail/{{item.id}}">
+                  <!-- <img src="{{item.icon}}"/> -->
+                  <img src="{{item.img}}" alt="" srcset="" class="what-we-do-bgimg">
+                  <h2>{{item.heading}}</h2>
+                </a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </IonContent>
+        <p><strong>The Company also has its own State of The Art Workshop which is fully equipped to convert the ideas and concepts into reality to create a symphony in interiors which is comfortable, attractive, besides being durable through a team of highly experienced professionals and workforce</strong></p>
+        <h2 class="heading-border">KEY<span>VALUES</span></h2>
+        <ul>
+          <li><ion-icon name="play"></ion-icon>Implementing innovative ideas</li>
+          <li><ion-icon name="play"></ion-icon>Utilizing the best of talents and skills</li>
+          <li><ion-icon name="play"></ion-icon>Trust & Confidence build-up</li>
+          <li><ion-icon name="play"></ion-icon>Transparency</li>
+          <li><ion-icon name="play"></ion-icon>Collective Responsibility</li>
+          <li><ion-icon name="play"></ion-icon>Collective Responsibility</li>
+          <li><ion-icon name="play"></ion-icon>Adding value to our client’s need</li>
+        </ul>
+    </div>
+  </div>  
 </ion-content>
  

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../../providers/services.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.page.html',
@@ -8,7 +9,8 @@ import { ServicesService } from '../../providers/services.service';
 export class LandingPage implements OnInit {
   landingMenu: any;
   constructor(
-    private service: ServicesService
+    private service: ServicesService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -17,5 +19,23 @@ export class LandingPage implements OnInit {
   }
   getLandingData(){
     return this.service.getData().landingMenu;
+  }
+  gotoHome(){
+    this.router.navigate(['home']);
+  }
+  gotoAbout(){
+    this.router.navigate(['about']);
+  }
+  gotoAssociation(){
+    this.router.navigate(['association']);
+  }
+  gotoGallery(){
+    this.router.navigate(['gallery']);
+  }
+  gotoProjects(){
+    this.router.navigate(['projects']);
+  }
+  gotoContact(){
+    this.router.navigate(['contact']);
   }
 }

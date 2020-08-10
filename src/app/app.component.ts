@@ -38,6 +38,21 @@ export class AppComponent {
     url   : '/about',  
     icon  : 'home'  
     },   
+    { 
+    title : 'Association',  
+    url   : '/association',  
+    icon  : 'home'  
+    },   
+    { 
+    title : 'Gallery',  
+    url   : '/gallery',  
+    icon  : 'home'  
+    },   
+    { 
+    title : 'Projects',  
+    url   : '/projects',  
+    icon  : 'home'  
+    },   
     {  
     title : 'Shop',  
     url   : '/shop',  
@@ -47,6 +62,11 @@ export class AppComponent {
     title : 'Tabs',  
     url   : '/tabs-page',  
     icon  : 'pricetags'   
+    },  
+    {  
+    title : 'Contact',  
+    url   : '/contact',  
+    icon  : 'contacts'   
     },  
     ];  
    }  
