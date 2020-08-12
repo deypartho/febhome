@@ -19,4 +19,5 @@ export class AssociationPage implements OnInit {
     });
     await popover.present();
   }
+  
 }

@@ -11,7 +11,7 @@
       </button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="presentPopover($event)">
+      <ion-button>
         <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -27,7 +27,7 @@
       <div class="card-subtitle">Melbourne, AU</div>
   </ion-card>
   
-    <IonContent>
+    
     <ion-row>
      <ion-col col-10 class="mynewcol22">
       <ion-card *ngFor="let product of catproducts">
@@ -45,35 +45,33 @@
                 <p>₹ {{product.price}}</p>
                 </ion-col>
              <ion-col col-5>
-                <a routerLink="/product/{{product.id}}" class="add-to-cart"  (click)="addCart()">
+                <a routerLink="/product/{{product.id}}" class="add-to-cart" >
                 <ion-icon name="cart-outline"></ion-icon>
                   Add To Cart
                 </a> 
               </ion-col>
-              
-              
               </ion-row>
             </IonContent>
           </ion-card-content>
       </ion-card>
       </ion-col>
   </ion-row>
-    </IonContent>
+    
     <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
       <ion-fab-button>
         <ion-icon name="share-social"></ion-icon>
       </ion-fab-button>
       <ion-fab-list side="top">
-        <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-vimeo"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="instagram" (click)="openSocial('Instagram', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-instagram"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-twitter"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+        <ion-fab-button >
           <ion-icon name="logo-facebook"></ion-icon>
         </ion-fab-button>
       </ion-fab-list>

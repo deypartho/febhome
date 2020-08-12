@@ -4,6 +4,9 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title class="page-title">Shop</ion-title>
     <ion-buttons slot="end">
       <button  class="cart-header" ion-button ><ion-icon name="cart"></ion-icon>
@@ -18,7 +21,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="card-background-page">
-  <IonContent>
+  
     <ion-grid>
       <ion-row align-items-center class="mynewr11">
         <ion-col  size="6" col-5 *ngFor = "let c of categorys">
@@ -32,22 +35,22 @@
         
       </ion-row>
     </ion-grid>
-    </IonContent>
+    
     <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
       <ion-fab-button>
         <ion-icon name="share-social"></ion-icon>
       </ion-fab-button>
       <ion-fab-list side="top">
-        <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-vimeo"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="instagram" (click)="openSocial('Instagram', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-instagram"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+        <ion-fab-button>
           <ion-icon name="logo-twitter"></ion-icon>
         </ion-fab-button>
-        <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+        <ion-fab-button >
           <ion-icon name="logo-facebook"></ion-icon>
         </ion-fab-button>
       </ion-fab-list>

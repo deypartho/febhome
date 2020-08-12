@@ -24,7 +24,7 @@
   <ion-slides [options]="slideOptsOne"  slidesPerView="3">
     <ion-slide *ngFor="let img of [1, 2, 3, 4, 5]">
       <div class="slider-wrap">
-        <img src="../../../assets/img/{{img}}.jpg" tappable (click)="openPreview(img)"/>
+        <img src="../../../assets/img/{{img}}.jpg"/>
       </div>
     </ion-slide>     
   </ion-slides>
@@ -43,7 +43,7 @@
   <div class="container">
     <h2 class="heading-border">What<span> We Do</span></h2>
     <div class="what-wedo-wrap">
-      <IonContent>
+      
         <ion-grid>
           <ion-row align-items-center class="mynewr11">
             <ion-col  size="6" col-5 class="item"  *ngFor="let item of whatWeDo">
@@ -55,7 +55,7 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-      </IonContent>
+      
     </div>
   </div>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
@@ -63,16 +63,16 @@
       <ion-icon name="share-social"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
+      <ion-fab-button>
         <ion-icon name="logo-vimeo"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button color="instagram" (click)="openSocial('Instagram', fab)">
+      <ion-fab-button>
         <ion-icon name="logo-instagram"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+      <ion-fab-button>
         <ion-icon name="logo-twitter"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+      <ion-fab-button >
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { PopoverPage } from '../popover/popover';
 import { ServicesService } from 'src/app/providers/services.service';
 import { Router } from '@angular/router';
@@ -10,7 +11,12 @@ import { Router } from '@angular/router';
 })
 export class AboutPage implements OnInit {
   whatWeDo: any;
-  constructor(public popoverCtrl: PopoverController, private service: ServicesService, private router: Router) { }
+  constructor(
+    public popoverCtrl: PopoverController, 
+    private service: ServicesService, 
+    private router: Router,
+    public loadingCtrl: LoadingController
+    ) { }
 
   ngOnInit() {
     this.whatWeDo = this.getwhatWeDo()
@@ -24,5 +30,14 @@ export class AboutPage implements OnInit {
       event
     });
     await popover.present();
+  }
+  async openSocial(network: string, fab: HTMLIonFabElement) {
+    const loading = await this.loadingCtrl.create({
+      message: `Posting to ${network}`,
+      duration: (Math.random() * 1000) + 500
+    });
+    await loading.present();
+    await loading.onWillDismiss();
+    fab.close();
   }
 }

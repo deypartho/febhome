@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServicesService } from 'src/app/providers/services.service';
 import { PopoverController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { PopoverPage } from '../popover/popover';
 
 @Component({
@@ -13,7 +14,12 @@ export class ProductPage implements OnInit {
 
   items: any;
  
-  constructor(public popoverCtrl: PopoverController, private route:ActivatedRoute, private service: ServicesService) { }
+  constructor(
+    public popoverCtrl: PopoverController, 
+    private route:ActivatedRoute, 
+    private service: ServicesService,
+    public loadingCtrl: LoadingController
+    ) { }
 
   ngOnInit() {
     let id = +this.route.snapshot.paramMap.get('id');
@@ -29,7 +35,13 @@ export class ProductPage implements OnInit {
     });
     await popover.present();
   }
-  myFunction(){
-    
+  async openSocial(network: string, fab: HTMLIonFabElement) {
+    const loading = await this.loadingCtrl.create({
+      message: `Posting to ${network}`,
+      duration: (Math.random() * 1000) + 500
+    });
+    await loading.present();
+    await loading.onWillDismiss();
+    fab.close();
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServicesService } from 'src/app/providers/services.service';
 import { PopoverController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { PopoverPage } from '../popover/popover';
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,12 @@ export class CartPage implements OnInit {
 
   items: any;
  
-  constructor(public popoverCtrl: PopoverController, private route:ActivatedRoute, private service: ServicesService) { }
+  constructor(
+    public popoverCtrl: PopoverController, 
+    private route:ActivatedRoute, 
+    private service: ServicesService,
+    public loadingCtrl: LoadingController
+    ) { }
 
   ngOnInit() {
   }
@@ -22,5 +28,14 @@ export class CartPage implements OnInit {
       event
     });
     await popover.present();
+  }
+  async openSocial(network: string, fab: HTMLIonFabElement) {
+    const loading = await this.loadingCtrl.create({
+      message: `Posting to ${network}`,
+      duration: (Math.random() * 1000) + 500
+    });
+    await loading.present();
+    await loading.onWillDismiss();
+    fab.close();
   }
 }

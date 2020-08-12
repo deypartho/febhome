@@ -15,7 +15,7 @@ export class LandingPage implements OnInit {
 
   ngOnInit() {
     this.landingMenu = this.getLandingData()
-    console.log(this.landingMenu)
+    // console.log(this.landingMenu)
   }
   getLandingData(){
     return this.service.getData().landingMenu;
